@@ -67,7 +67,7 @@ html{
 	font-family: jost, sans-serif;
 }
 .home {
-	background-image: url("img2.jpg");
+	background-image: url("https://img.freepik.com/premium-photo/bookshelves-library-with-old-books-3d-render-3d-illustration_717906-963.jpg");
 	background-size: cover;
 	padding: 100px 50px;
 	max-width: 100%;
@@ -188,7 +188,7 @@ html{
 }
 
 .events h2 {
-	background-color: rgba(5,5,5,0.25);
+	background-color: rgba(5,5,5,0.4);
     font-size: 52px;
     margin-bottom: 200px;
 	border-radius:10px;
@@ -226,8 +226,26 @@ td{
 	padding: 10px;
 	border: 2px solid black;
 }
-.lib-time{
-	padding:25px;
+.lib-items{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	padding-right:25px;
+	background-color:rgba(6,6,6,0.5);
+	color:white;
+	border-color:white;
+	align-content:center;
+}
+.lib-time h2 {
+	padding: 0 50px;
+	font-size:30px;
+}
+.lib-time th,td {
+	background-color:rgba(150,150,150,0.2);
+	font-size:20px;
+}
+.lib-team{
+	padding: 0 50px;
 }
 .content-container {
     display: flex;
@@ -240,69 +258,22 @@ td{
     margin-right: 20px;
 }
 
-.quick-links {
-    flex: 1;
-    background-color: #f0f0f0;
-    padding: 15px;
-    border-radius: 5px;
-}
-
-.quick-links h2 {
-    margin-top: 0;
-}
-
-.quick-links ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.quick-links li {
-    margin-bottom: 10px;
-}
-
-.quick-links a {
-    text-decoration: none;
-    color: #333;
-}
-
-.quick-links a:hover {
-    text-decoration: underline;
-}
-/* Dropdown Styles */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #505050;
+.abt {
+	background-color:rgba(6,6,6,0.4);
+	max-width:100%;
+	display:flex;
+	flex-flow: column;
+	align-items: center;
+    font-size: 28px;
 	color: white;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
+	border-radius:10px;
 }
-
-.dropdown-content.show {
-    display: flex;
-	border-radius: 5px;
+.abt-main {
+	background-image:url("https://img.freepik.com/premium-photo/bookshelves-library-with-old-books-3d-render-3d-illustration_717906-963.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: vertical-align;
 }
-
-.dropdown-content p {
-    color: white;
-    margin: 0;
-}
-
-.dropbtn {
-    background-color: red;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropbtn:hover {
-    background-color: darkred;
+.lib-rules li{
+	padding:15px;
 }
