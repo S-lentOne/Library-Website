@@ -1,56 +1,30 @@
 <!DOCTYPE html>
 <html>
     <link href="Project.css" rel="stylesheet">
-    <script>
-        function toggleDropdown() {
-            var dropdown = document.querySelector(".dropdown-content");
-            dropdown.classList.toggle("show");
-        }
-
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                for (var i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-    </script>
 </head>
-<body>
-    <div class="navbar">
-        <a href="Home.html" class="navbar-brand">
-            <img src="logo.jpg" alt="Chitkara University" class="nav-logo">
-            Library
-        </a>
+<body class="abt-main">
+<div class="navbar">
+        <a href="Home.html" class="navbar-brand" title="Home">
+		<img src="logo.jpg" alt="Chitkara University" class="nav-logo">
+		Library
+		</a>
         <ul class="nav-links">
             <li><a href="Resources.html" title="Look at your resources">My Library</a></li>
             <li><a href="About.html" title="About Chitkara's Library">About</a></li>
             <li><a href="Gallery.html" title="Look at pictures of the library">Gallery</a></li>
-            <li><a href="https://course.testpad.chitkarauniversity.edu.in/user-dashboard" title="Your dashboard in testpad">Testpad</a></li>
-            <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdown()">Contact</a>
-                <div class="dropdown-content">
-                    <p> 
-                        Contact info: <br>
-                        Mob. No.: +91 1234567890<br>
-                        Email: example@mail.com<br>
-                    </p>
-                </div>
-            </li>
+			<li><a href="https://course.testpad.chitkarauniversity.edu.in/user-dashboard" title="Your dashboard in testpad">Testpad</a></li>
+            <li><a href="Contact.html" title="For any Contact information">Contact</a></li>
         </ul>
     </div>
-	<div class="about-us">
+	<div class="abt">
 	<h2>About Us</h2>
+	<br>
 	<p>Brief introduction about the library</p>
 	</div>
+	<div class="lib-items">
 	<div class="lib-time">
 	<h2>Library Timings -</h2>
-	<table border=4px cellpadding=15px cellspacing=5px>
+	<table border=4px cellpadding=15px cellspacing=5px color="white">
 	<th>
 	Services
 	</th>
@@ -136,23 +110,54 @@
 	</table>
 	</div>
 	<div class="lib-rules">
-	<h2>Library Rules</h2>
+	<h2>Library Rules -</h2>
+	<p>
+	<ol>
+	<li>
+	
+	</li>
+
+	<li>
+	
+	</li>
+
+	<li>
+	
+	</li>
+
+	<li>
+	
+	</li>
+
+	<li>
+	
+	</li>
+
+	<li>
+	
+	</li>
+
+	<li>
+	
+	</li>
+	</ol>
+	</p>
 	</div>
-	<div class="lib-service">
-	<h2>Library Services</h2>
+	<div class="lib-serv">
+	<h2>Library Services -</h2>
 	</div>
 	<div class="lib-team">
-	<h2>Library Team</h2>
+	<h2>Library Team -</h2>
 	</div>
-        <div class="quick-links">
-            <h2>Quick Links</h2>
-            <ul>
-                <li><a href="Home.html">Home</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Gallery.html">Gallery</a></li>
-            </ul>
-        </div>
-    </div>
+	</div>
+<div class="quick-links">
+        <h2 class="ql-header">Quick Links</h2>
+        <ul>
+			<li><a href="Home.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+        </ul>
+</div>
 </body>
 </html>
 </body>
