@@ -67,7 +67,7 @@ html{
 	font-family: jost, sans-serif;
 }
 .home {
-	background-image: url("img2.jpg");
+	background-image: url("https://img.freepik.com/premium-photo/bookshelves-library-with-old-books-3d-render-3d-illustration_717906-963.jpg");
 	background-size: cover;
 	padding: 100px 50px;
 	max-width: 100%;
@@ -188,7 +188,7 @@ html{
 }
 
 .events h2 {
-	background-color: rgba(5,5,5,0.25);
+	background-color: rgba(5,5,5,0.4);
     font-size: 52px;
     margin-bottom: 200px;
 	border-radius:10px;
@@ -217,17 +217,30 @@ html{
 	color: lightblue;
 }
 table{
-	margin-left:50px;
+	margin: 0px 10px;
 	border-radius: 5px;
 	border-collapse: collapse;
+	width: 100%;
 }
-td{
+
+.lib-items{
+	padding-right:25px;
+	margin-top: 40px;
+	background-color:rgba(6,6,6,0.5);
+	color:white;
+	border-color:white;
+	align-content:center;
+}
+.lib-time h2 {
+	padding: 0 50px;
+	font-size:30px;
+}
+.lib-time th,td {
+	background-color:rgba(150,150,150,0.2);
+	font-size:20px;
+	border: white solid 1px;
 	text-align: center;
 	padding: 10px;
-	border: 2px solid black;
-}
-.lib-time{
-	padding:25px;
 }
 .content-container {
     display: flex;
@@ -240,69 +253,114 @@ td{
     margin-right: 20px;
 }
 
-.quick-links {
-    flex: 1;
-    background-color: #f0f0f0;
-    padding: 15px;
-    border-radius: 5px;
-}
-
-.quick-links h2 {
-    margin-top: 0;
-}
-
-.quick-links ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.quick-links li {
-    margin-bottom: 10px;
-}
-
-.quick-links a {
-    text-decoration: none;
-    color: #333;
-}
-
-.quick-links a:hover {
-    text-decoration: underline;
-}
-/* Dropdown Styles */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #505050;
+.abt {
+	background-color:rgba(6,6,6,0.4);
+	max-width:100%;
+	display:flex;
+	flex-flow: column;
+	align-items: center;
+    font-size: 28px;
 	color: white;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
+	border-radius:10px;
 }
-
-.dropdown-content.show {
-    display: flex;
+.abt-main {
+	background-image:url("https://img.freepik.com/premium-photo/bookshelves-library-with-old-books-3d-render-3d-illustration_717906-963.jpg");
+	background-size: auto;
+	background-position: center;
+	background-repeat: repeat;
+}
+.lib-items li{
+	padding:1%;
+	margin-right: 5%;
+	margin-left: 5%;
+	font-size: 20px;
+}
+.lib-rules h2 {
+	padding: 0 50px;
+	font-size:30px;
+}
+.lib-serv h2 {
+	padding: 0 50px;
+	font-size:30px;
+}
+.lib-team h2 {
+	padding: 0 50px;
+	font-size:30px;
+}
+.quick-links {
+	background-color: rgba(0,0,0,0.7);
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	position: sticky;
+	bottom:1;
+	z-index:1000;
+}
+.quick-links a {
+	color:lightblue;
+}
+.login {
+	background-image:url("https://img.freepik.com/premium-photo/bookshelves-library-with-old-books-3d-render-3d-illustration_717906-963.jpg");
+	background-size: auto;
+	background-position: center;
+	background-repeat: repeat;
+	height:100%;
+	color:white;
+	display:flex;
+	justify-content:center;
+	flex-direction: column;
+	padding:20px;
+}
+.login form{
+	display:flex;
+	background-color: rgba(7,7,7,0.6);
+	text-align:center;
+	align-items:center;
+	flex-direction:column;
+	padding:20px;
+	border-radius:5px;
+	margin: 20%;
+	font-size:20px;
+}
+.login p {
+	display:flex;
+	background-color: rgba(7,7,7,0.6);
+	justify-content:center;
+	margin: 0px 35%;
 	border-radius: 5px;
 }
-
-.dropdown-content p {
-    color: white;
-    margin: 0;
+.login input {
+	width:45%;
+	text-align:center;
+	margin:20px;
 }
-
-.dropbtn {
-    background-color: red;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
+.login button{
+	margin:20px;
+	width: 25%;
+	background-color:#8974db;
+	border-radius:5px;
 }
-
-.dropbtn:hover {
-    background-color: darkred;
+.login a{
+	color:lightblue;
+	font-style:italic;
+}
+button {
+	cursor:pointer;
+}
+button:hover {
+	opacity:1;
+}
+.signup-text h1{
+	font-size: 40px;
+	color: white;
+	display:flex;
+	background-color: rgba(7,7,7,0.6);
+	justify-content:center;
+	margin: 0px 35%;
+	border-radius: 5px;
+}
+#cancelbtn {
+	background-color:#db7474;
 }
