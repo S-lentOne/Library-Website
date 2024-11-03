@@ -302,11 +302,12 @@ table{
 	color:lightblue;
 }
 .login {
-	background-image:url("https://img.freepik.com/premium-photo/bookshelves-library-with-old-books-3d-render-3d-illustration_717906-963.jpg");
-	background-size: auto;
+	background-image:url("https://img.freepik.com/free-photo/book-library-with-open-textbook_1150-5916.jpg?t=st=1730608086~exp=1730611686~hmac=811b5ef52ad8f25e7548695a0c443f43da7e268dc0ab41b900e488022c5f69d1&w=1380");
+	background-size: cover;
 	background-position: center;
-	background-repeat: repeat;
+	background-repeat: no-repeat;
 	height:100%;
+	max-width: 100%;
 	color:white;
 	display:flex;
 	justify-content:center;
@@ -321,7 +322,9 @@ table{
 	flex-direction:column;
 	padding:20px;
 	border-radius:5px;
-	margin: 20%;
+	margin-right: 20%;
+	margin-left: 20%;
+	margin-top:5%;
 	font-size:20px;
 }
 .login p {
@@ -329,17 +332,18 @@ table{
 	background-color: rgba(7,7,7,0.6);
 	justify-content:center;
 	margin: 0px 35%;
+	margin-bottom:5%;
 	border-radius: 5px;
 }
 .login input {
-	width:45%;
+	width:auto;
 	text-align:center;
 	margin:20px;
 }
 .login button{
 	margin:20px;
 	width: 25%;
-	background-color:#8974db;
+	background-color:lightgreen;
 	border-radius:5px;
 }
 .login a{
@@ -348,11 +352,14 @@ table{
 }
 button {
 	cursor:pointer;
+	padding:1%;
+	font-size: 20px;
+	font-weight:bold;
 }
 button:hover {
 	opacity:1;
 }
-.signup-text h1{
+.signin-text h1{
 	font-size: 40px;
 	color: white;
 	display:flex;

@@ -11,13 +11,12 @@
             <li><a href="About.html" title="About Chitkara's Library">About</a></li>
             <li><a href="Gallery.html" title="Look at pictures of the library">Gallery</a></li>
 			<li><a href="https://course.testpad.chitkarauniversity.edu.in/user-dashboard" title="Your dashboard in testpad">Testpad</a></li>
-            <li><a href="Signup.html" title="Sign up/Login here">Sign In</a></li>
+            <li><a href="Login.html" title="Sign up/Login here">Sign In</a></li>
         </ul>
     </div>
-</body>
 
 <div class="login">
-<div class="signup-text">
+<div class="signin-text">
 	<h1>
 		Sign Up
 	</h1>
@@ -26,16 +25,34 @@
 	</p>
 </div>
 	<form action="">
+		<div>
 		<label for="email"><b>Email:</b></label>
 		<input type="text"name="email" placeholder="Enter Email Here" required>
+		</div>
+		<div>
 		<label for="psw"><b>Password:</b></label>
 		<input type="password" name="psw" placeholder="Enter Password Here" required>
-		<label for="psw-rep"><b>Repeat Password:</b></label>
+		</div>
+		<div>
+		<label for="psw-rep"><b>Re-Enter Password:</b></label>
 		<input type="password" name="psw-rep" placeholder="Re-Enter Password Here" required>
-		<label for="remember-me"> Remember me </label>
-		<input type="checkbox" id="remember-me" name="remember-me" style="margin-bottom:15px;">
+		</div>
+		<div>
+		<label for="remember"> Remember me </label>
+		<input type="checkbox" id="remember" name="remember" style="margin-bottom:15px;">
+		</div>
+		<button type="button" id="submit">Sign Up</button>
 		<button type="button" id="cancelbtn">Cancel</button>
-		<button type="button" id="submit">Submit</button>
-	</form>
+	</form>		
+
 </div>
+<div class="quick-links">
+	<h2 class="ql-header">Quick Links</h2>
+	<ul>
+		<li><a href="Home.html" class="cta-button">Home</a></li>
+		<li><a href="About.html" class="cta-button">About</a></li>
+		<li><a href="Gallery.html" class="cta-button">Gallery</a></li>
+	</ul>
+</div>
+</body>
 </html>
