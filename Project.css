@@ -468,7 +468,16 @@ button:hover {
 	font-style: normal;
 	text-decoration: none;
 }
-div.gallery {
+#myImg {
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.3s;
+  }
+  
+  #myImg:hover {opacity: 0.7;}
+  
+  div.gallery {
+	padding: 6px;
 	border: 1px solid #ccc;
   }
   
@@ -491,7 +500,7 @@ div.gallery {
   }
   
   .responsive {
-	padding: 0 6px;
+	padding: 10px;
 	float: left;
 	width: 24.99999%;
   }
@@ -514,4 +523,3 @@ div.gallery {
 	display: table;
 	clear: both;
   }
-  
