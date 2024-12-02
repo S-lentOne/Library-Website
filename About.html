@@ -1,192 +1,308 @@
 <!DOCTYPE html>
-<html>
-    <link href="Project.css" rel="stylesheet">
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+	<link href="Project.css" rel="stylesheet" />
+</head>
+
 <body class="abt-main">
-<div class="navbar">
-    <a href="Home.html" class="navbar-brand" title="Home">
-		<img src="logo.jpg" alt="Chitkara University" class="nav-logo">Library
-	</a>
-    <ul class="nav-links">
-        <li><a href="Resources.html" title="Look at your resources">My Library</a></li>
-        <li><a href="About.html" title="About Chitkara's Library">About</a></li>
-        <li><a href="Gallery.html" title="Look at pictures of the library">Gallery</a></li>
-		<li><a href="https://course.testpad.chitkarauniversity.edu.in/user-dashboard" title="Your dashboard in testpad">Testpad</a></li>
-        <li><a href="Signup.html" title="Sign up/Login here">Sign In</a></li>
-    </ul>
-</div>
-<div class="abt">
-	<h2>About Us</h2>
-	<br>
-	<p>Brief introduction about the library</p>
-</div>
-<div class="lib-items">
-	<div class="lib-time">
-		<h2>Library Timings -</h2>
-		<table border=4px cellpadding=15px cellspacing=5px color="white">
-			<th>
-				Services
-			</th>
-			<th>
-				From
-			</th>
-			<th>
-				To
-			</th>
-			<tr>
-				<td>
-					<strong>Opening Hours -</strong>
-				</td>
-				<td>
-					9:30 AM
-				</td>
-				<td>
-					4:00 PM
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<strong>Lending Services -</strong>
-				</td>
-				<td>
-					9:30 AM
-				</td>
-				<td>
-					4:00 PM
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<strong>Library Services -</strong>
-				</td>
-				<td>
-					9:30 AM
-				</td>
-				<td>
-					4:00 PM
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<strong>Photocopy Services -</strong>
-				</td>
-				<td>
-					9:30 AM
-				</td>
-				<td>
-					4:00 PM
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<strong>Printouts Services -</strong>
-				</td>
-				<td>
-					9:30 AM
-				</td>
-				<td>
-					4:00 PM
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<strong>Scanning Services -</strong>
-				</td>
-				<td>
-					9:30 AM
-				</td>
-				<td>
-					4:00 PM
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<strong>Holidays -</strong>
-				</td>
-				<td>
-					9:30 AM
-				</td>
-				<td>
-					4:00 PM
-				</td>
-			</tr>
-		</table>
+	<div class="navbar">
+		<a href="Home.html" class="navbar-brand" title="Home">
+			<img src="logo.jpg" alt="Chitkara University" class="nav-logo" />Library
+		</a>
+		<ul class="nav-links">
+			<li>
+				<a href="resources.php" title="Look at your resources">My Library</a>
+			</li>
+			<li><a href="About.html" title="About Chitkara's Library">About</a></li>
+			<li>
+				<a href="Gallery.html" title="Look at pictures of the library">Gallery</a>
+			</li>
+			<li>
+				<a href="https://course.testpad.chitkarauniversity.edu.in/user-dashboard"
+					title="Your dashboard in testpad">Testpad</a>
+			</li>
+			<li><a href="login.php" title="Sign up/Login here">Sign In</a></li>
+		</ul>
 	</div>
-	<div class="lib-rules">
-		<h2>Library Rules -</h2>
-		<p>
-			<ol>
+<div class="sidebar-nav" id="sidebar">
+        <div class="sidebar-content">
+            <div class="sidebar-section">
+                <h3>Current Page</h3>
+                <p id="current-page">About Us</p>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Quick Access</h3>
+                <ul>
+                    <li><a href="booklist.php">Book List</a></li>
+                    <br>
+                    <li><a href="cart.php">Cart</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+					<br>
+                    <li><a href="resources.php">My Library</a></li>
+                    <br>
+					<li><a href="donate.php">Donate Books</a></li>
+                    <br>
+					<li><strong>Help Center</strong></li>
+						<ul style="list-style-type:none;">
+							<li>Email: librarian@chitkarauniversity.edu.in</li>
+							<li>Phone: +91.01795-661028</li>
+						</ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <button class="sidebar-toggle" id="sidebarToggle" title="Quick Access">▶</button>
+
+    <div class="mobile-footer-nav">
+        <button onclick="toggleSidebar()">📍 Location</button>
+        <button>🔍 Search</button>
+        <button>⚙️ Menu</button>
+    </div>
+<script>
+		function toggleSidebar() {
+			const sidebar = document.getElementById('sidebar');
+			sidebar.classList.toggle('active');
+		}
+
+		document.getElementById('sidebarToggle').addEventListener('click', toggleSidebar);
+
+		// Optional: Close sidebar when clicking outside
+		document.addEventListener('click', function(event) {
+			const sidebar = document.getElementById('sidebar');
+			const sidebarToggle = document.getElementById('sidebarToggle');
+			
+			if (!sidebar.contains(event.target) && 
+				!sidebarToggle.contains(event.target) && 
+				sidebar.classList.contains('active')) {
+				toggleSidebar();
+			}
+		});
+</script>	
+		<div class="abt">
+		<h2>About Us</h2>
+		<br>
+		<p class="abt-head">Brief introduction about the library</p>
+		<p class="abt-para">The Tagore Library has been serving the information needs of faculty, staff, and students at the university and is a foundation of academic and research activities. In addition to the central library, Chitkara University has two branch libraries, the nursing library and the pharmacy library. The Library is located in a three-story building; the First floor is dedicated to the reading hall, which is open from 9.00 am to 9.00 pm. There is also a Reference Section, Periodicals Section, Circulation Section, and a reading room on this floor. Along with the return counter, the second floor houses the stack area and Digital Information section. The third floor houses a dedicated reading hall.
+			<br>
+			<br>
+			Tagore Library is well equipped with modern facilities and resources (print and electronic) in the form of CDROM, DVD-ROM, online databases, video cassettes, patents, standards, thesis, reports, e-books, e-journals, etc. The Digital Library section of the Tagore Library has developed an institutional digital repository using world-renowned software DSpace, which preserves the institute's intellectual output for posterity.
+			<br>
+			<br>
+			Dedicated staff assists students in navigating the library collections and finding information on specific topics. Library spaces inspire students to conduct research and collaboration. The interdisciplinary environment of the library transforms students into lifelong learners. The Tagore library strongly believes in Academic integrity.
+			<br>
+			<br>
+			Besides more than 41,997 books and 52 subscriptions to periodicals, the library also houses 2,86,920 e-journals and 69,73,579 e-books. The library has central air conditioning, Wi-Fi, and can seat 395 people. Library subscribed to several databases, including IEEE, Knowledge-Hub, EBSCO, Proquest, and DELNET.</p>
+	</div>
+
+
+	<div class="wrapper">
+		<div class="lib-items">
+			<h2>Library Timings</h2>
+			<table>
+				<tr>
+					<th>Services</th>
+					<th>From</th>
+					<th>To</th>
+				</tr>
+				<tr>
+					<td>
+						<strong>Opening Hours </strong>
+					</td>
+					<td>9:30 AM</td>
+					<td>4:00 PM</td>
+				</tr>
+				<tr>
+					<td>
+						<strong>Lending Services </strong>
+					</td>
+					<td>9:30 AM</td>
+					<td>4:00 PM</td>
+				</tr>
+				<tr>
+					<td>
+						<strong>Library Services </strong>
+					</td>
+					<td>9:30 AM</td>
+					<td>4:00 PM</td>
+				</tr>
+				<tr>
+					<td>
+						<strong>Photocopy Services </strong>
+					</td>
+					<td>9:30 AM</td>
+					<td>4:00 PM</td>
+				</tr>
+				<tr>
+					<td>
+						<strong>Printouts Services </strong>
+					</td>
+					<td>9:30 AM</td>
+					<td>4:00 PM</td>
+				</tr>
+				<tr>
+					<td>
+						<strong>Scanning Services </strong>
+					</td>
+					<td>9:30 AM</td>
+					<td>4:00 PM</td>
+				</tr>
+				<tr>
+					<td>
+						<strong>Holidays </strong>
+					</td>
+					<td>9:30 AM</td>
+					<td>4:00 PM</td>
+				</tr>
+			</table>
+		</div>
+
+	</div>
+	<h2 class="abt-title">Library Rules -</h2>
+	<div class="wrapper">
+
+			<ol class="lib-rule">
 				<li>
-					Rule 1
+					Maintain silence and respect others' study environment
 				</li>
 
 				<li>
-					Rule 2
+					Handle books carefully: no folding pages, writing, or damaging materials.
 				</li>
 
 				<li>
-					Rule 3
+					Return borrowed/rented books on time to avoid late fees.
 				</li>
 
 				<li>
-					Rule 4
+					Keep food and drinks away from books and study areas.
 				</li>
 
 				<li>
-					Rule 5
+					Clean up your workspace after use, pushing in chairs and disposing of trash.
 				</li>
 
 				<li>
-					Rule 6
+					Respect library equipment: report any malfunctioning computers, printers, or other resources to staff immediately.
 				</li>
 
 				<li>
-					Rule 7
+					Always have your student ID with you when entering and borrowing materials.
 				</li>
 			</ol>
-		</p>
 	</div>
-	<div class="lib-serv">
-		<h2>Library Services -</h2>
-		<ul>
+	<h2 class="abt-title">Library Services -</h2>
+	<div class="wrapper">
+		<ul class="lib-serv">
 			<li>
-				Service 1
+				Document supply
 			</li>
 			<li>
-				Service 2
+				Orientation to Faculty/ Students
 			</li>
 			<li>
-				Service 3
+				Photocopying
 			</li>
 			<li>
-				Service 4
+				Grammar Check
 			</li>
 			<li>
-				Service 5
+				Printout
+			</li>
+			<li>
+				Scanning
+			</li>
+			<li>
+				Reference
 			</li>
 		</ul>
 	</div>
-	<div class="lib-team">
-		<h2>Library Team -</h2>
-		<ul>
+	<h2 class="abt-title">Library Team -</h2>
+	<div class="wrapper">
+		<ul class="lib-team">
 			<li>
-				Member 1
+				Khushi Dua
 			</li>
 			<li>
-				Member 2
+				Manthan Garg
 			</li>
 			<li>
-				Member 3
+				Mridul
+			</li>
+			<li>
+				Nikita Arora
 			</li>
 		</ul>
 	</div>
 </div>
-<div class="quick-links">
-        <h2 class="ql-header">Quick Links</h2>
-        <ul>
-			<li><a href="Home.html" class="cta-button">Home</a></li>
-            <li><a href="About.html" class="cta-button">About</a></li>
-            <li><a href="Gallery.html" class="cta-button">Gallery</a></li>
-        </ul>
-</div>
+	<div class="row-link-row">
+		<div class="menu-footer-container">			
+		
+			<img src="logo-mn.jpg" alt="Chitkara University" class="ql-logo" />
+			<p class="contact"> 
+				<span class="bold">Support & Assistance</span>
+				<br>
+				<br>
+				Pinjore-Barotiwala National Highway (NH-21A)
+				<br>
+				Himachal Pradesh – 174 103
+				<br>
+				<br>
+				Email: librarian@chitkarauniversity.edu.in
+				<br>
+				Phone: +91.01795-661028
+			</p>
+			<div class="link-footer"> 
+				<ul>
+					<li>
+						<p class="bold">Explore<p>
+					</li>
+					
+					<li>
+						<a class="cta-button" href="#">About</a>
+					</li>
+	
+					<li>
+						<a class="cta-button" href="#">Testpad</a>
+					</li>
+	
+					<li>
+						<a class="cta-button" href="donate.php">Donate</a>
+					</li>
+	
+					<li>
+						<a class="cta-button" href="resources.php">Resources</a>
+					</li>
+	
+					<li>
+						<a class="cta-button" href="About.html"> Hours &amp; Timings </a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="social-footer">
+				<ul><li><p class="bold">Socials<p></li>
+					<li><a class="cta-button" href="#">Newsletter</a></li>
+					<li><a class="cta-button" href="#">Facebook</a></li>
+					<li><a class="cta-button" href="#">Twitter</a></li>
+					<li><a class="cta-button" href="#">GMaps Location</a></li>
+					<li><a class="cta-button" href="#">Instagram</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
 </body>
+
 </html>

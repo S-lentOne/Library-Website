@@ -1,19 +1,21 @@
 <script>
-    function toggleDropdown() {
-        var dropdown = document.querySelector(".dropdown-content");
-        dropdown.classList.toggle("show");
-    }
-
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            for (var i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                }
-            }
+	        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
         }
-    }
+
+        document.getElementById('sidebarToggle').addEventListener('mouseover', toggleSidebar);
+        document.getElementById('sidebarToggle').addEventListener('click', toggleSidebar);
+
+        // Optional: Close sidebar when clicking outside
+        document.addEventListener('click', function(event) {
+            const sidebar = document.getElementById('sidebar');
+            const sidebarToggle = document.getElementById('sidebarToggle');
+            
+            if (!sidebar.contains(event.target) && 
+                !sidebarToggle.contains(event.target) && 
+                sidebar.classList.contains('active')) {
+                toggleSidebar();
+            }
+        });
 </script>
