@@ -1,21 +1,92 @@
-<html>
-<link href="Project.css" rel="stylesheet">
-<body>
-    <div class="navbar">
-        <a href="Home.html" class="navbar-brand" title="Home">
-		<img src="logo.jpg" alt="Chitkara University" class="nav-logo">
-		Library
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="Project.css" rel="stylesheet">
+
+</head>
+	<div class="navbar">
+		<a href="Home.html" class="navbar-brand" title="Home">
+			<img src="logo.jpg" alt="Chitkara University" class="nav-logo">
+			Library
 		</a>
-        <ul class="nav-links">
-            <li><a href="Resources.html" title="Look at your resources">My Library</a></li>
-            <li><a href="About.html" title="About Chitkara's Library">About</a></li>
-            <li><a href="Gallery.html" title="Look at pictures of the library">Gallery</a></li>
-			<li><a href="https://course.testpad.chitkarauniversity.edu.in/user-dashboard" title="Your dashboard in testpad">Testpad</a></li>
-            <li><a href="Login.html" title="Sign up/Login here">Sign In</a></li>
-        </ul>
+		<ul class="nav-links">
+			<li><a href="resources.php" title="Look at your resources">My Library</a></li>
+			<li><a href="About.html" title="About Chitkara's Library">About</a></li>
+			<li><a href="Gallery.html" title="Look at pictures of the library">Gallery</a></li>
+			<li><a href="https://course.testpad.chitkarauniversity.edu.in/user-dashboard"
+					title="Your dashboard in testpad">Testpad</a></li>
+			<li><a href="login.php" title="Sign up/Login here">Sign In</a></li>
+		</ul>
+	</div>
+	<div class="sidebar-nav" id="sidebar">
+        <div class="sidebar-content">
+            <div class="sidebar-section">
+                <h3>Current Page</h3>
+                <p id="current-page">Gallery</p>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Quick Access</h3>
+                <ul>
+                    <li><a href="booklist.php">Book List</a></li>
+                    <br>
+                    <li><a href="cart.php">Cart</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+					<br>
+                    <li><a href="resources.php">My Library</a></li>
+                    <br>
+					<li><a href="donate.php">Donate Books</a></li>
+                    <br>
+					<li><strong>Help Center</strong></li>
+						<ul style="list-style-type:none;">
+							<li>Email: librarian@chitkarauniversity.edu.in</li>
+							<li>Phone: +91.01795-661028</li>
+						</ul>
+                </ul>
+            </div>
+        </div>
     </div>
-		  	  
-	  <div class="responsive">
+
+    <button class="sidebar-toggle" id="sidebarToggle" title="Quick Access">▶</button>
+
+    <div class="mobile-footer-nav">
+        <button onclick="toggleSidebar()">📍 Location</button>
+        <button>🔍 Search</button>
+        <button>⚙️ Menu</button>
+    </div>
+<script>
+		function toggleSidebar() {
+			const sidebar = document.getElementById('sidebar');
+			sidebar.classList.toggle('active');
+		}
+
+		document.getElementById('sidebarToggle').addEventListener('click', toggleSidebar);
+
+		// Optional: Close sidebar when clicking outside
+		document.addEventListener('click', function(event) {
+			const sidebar = document.getElementById('sidebar');
+			const sidebarToggle = document.getElementById('sidebarToggle');
+			
+			if (!sidebar.contains(event.target) && 
+				!sidebarToggle.contains(event.target) && 
+				sidebar.classList.contains('active')) {
+				toggleSidebar();
+			}
+		});
+</script>	
+<body>
+
+	<div class="responsive">
 		<div class="gallery">
 		  <a target="_blank" href="WhatsApp Image 2024-11-07 at 15.43.30.jpeg">
 			<img src="WhatsApp Image 2024-11-07 at 15.43.30.jpeg" alt="Rare Books Section">
@@ -194,15 +265,65 @@
 		  <div class="desc">Periodical Section</div>
 		</div>
 	  </div>
-
-	  <div class="clearfix"></div>
-	<div class="quick-links">
-		<h2 class="ql-header">Quick Links</h2>
-		<ul>
-			<li><a href="Home.html" class="cta-button">Home</a></li>
-			<li><a href="About.html" class="cta-button">About</a></li>
-			<li><a href="Gallery.html" class="cta-button">Gallery</a></li>
-		</ul>
-	</div>
+	
 </body>
+
+<div class="row-link-row">
+		<div class="menu-footer-container">			
+		
+			<img src="logo-mn.jpg" alt="Chitkara University" class="ql-logo" />
+			<p class="contact"> 
+				<span class="bold">Support & Assistance</span>
+				<br>
+				<br>
+				Pinjore-Barotiwala National Highway (NH-21A)
+				<br>
+				Himachal Pradesh – 174 103
+				<br>
+				<br>
+				Email: librarian@chitkarauniversity.edu.in
+				<br>
+				Phone: +91.01795-661028
+			</p>
+			<div class="link-footer"> 
+				<ul>
+					<li>
+						<p class="bold">Explore<p>
+					</li>
+					
+					<li>
+						<a class="cta-button" href="#">About</a>
+					</li>
+	
+					<li>
+						<a class="cta-button" href="#">Testpad</a>
+					</li>
+	
+					<li>
+						<a class="cta-button" href="donate.php">Donate</a>
+					</li>
+	
+					<li>
+						<a class="cta-button" href="resources.php">Resources</a>
+					</li>
+	
+					<li>
+						<a class="cta-button" href="About.html"> Hours &amp; Timings </a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="social-footer">
+				<ul><li><p class="bold">Socials<p></li>
+					<li><a class="cta-button" href="#">Newsletter</a></li>
+					<li><a class="cta-button" href="#">Facebook</a></li>
+					<li><a class="cta-button" href="#">Twitter</a></li>
+					<li><a class="cta-button" href="#">GMaps Location</a></li>
+					<li><a class="cta-button" href="#">Instagram</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
 </html>
