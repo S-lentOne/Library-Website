@@ -9,4 +9,5 @@ A few more things to mention:
 - There was a limit to the colors We could use, it had to be from the University's brand kit
 - There was a limit to the number of pages linking from one page to another
 - They weren't expecting any interactivity
+
 _this was not informed to me by anyone, and I was disqualified for using scripts, as it was unfair to use scripts while others had barely grasped styling (which I personally still find as a dumb and lacking explanation as to why I wasn't informed that this "unfair advantage" was not to be used)._
